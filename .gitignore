@@ -1,0 +1,10 @@
+.gradle/
+build/
+.idea/
+*.iml
+*.log
+data/
+credentials.properties
+plugin-key.txt
+identity-salt.txt
+keys.json
