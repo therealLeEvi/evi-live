@@ -1,0 +1,29 @@
+name: Build and synthetic checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '11'
+      - name: Build on Linux
+        if: runner.os == 'Linux'
+        run: bash gradlew --no-daemon --console=plain clean build
+      - name: Build on Windows
+        if: runner.os == 'Windows'
+        run: .\gradlew.bat --no-daemon --console=plain clean build
