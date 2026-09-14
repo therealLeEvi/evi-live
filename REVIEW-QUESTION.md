@@ -6,4 +6,4 @@ The plugin sends selected observations of the user's own GE offers to a fixed `1
 
 Does the rejected-features rule exclude this complete architecture, including the separate bridge's local API? If so, would a user-enabled local trade-file export for the same companion application be an acceptable alternative, or is this integration outside the scope of the Hub regardless of transport?
 
-I do not want to treat localhost or moving the HTTP listener into a companion process as a way around the rule. I can adjust the design openly before submission. No public repository or Plugin Hub approval is being claimed at this stage.
+I do not want to treat localhost or moving the HTTP listener into a companion process as a way around the rule. I can adjust the design openly before submission. The plugin source is at https://github.com/therealLeEvi/evi-live. It is a development candidate, not a submitted or approved Plugin Hub release. A clean public companion distribution is still being prepared; the complete bridge behavior is described above for the policy question.
