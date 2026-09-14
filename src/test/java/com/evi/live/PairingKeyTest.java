@@ -1,4 +1,5 @@
 package com.evi.live;
+
 public final class PairingKeyTest {
   public static void main(String[] args) {
     String key="abcdef0123456789".repeat(4);
